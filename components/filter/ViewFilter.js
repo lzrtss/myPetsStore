@@ -5,25 +5,41 @@ export class ViewFilter {
   constructor(contr) {
     this.controller = contr;
     // this.templater = new Templater('./components/filter/Filter.html');
-    this.applyPriceFilterBtn = document.querySelector('#apply-price-filter');
-    this.applyQtyFilterBtn = document.querySelector('#apply-qty-filter');
+
+    // this.applyPriceFilterBtn = document.querySelector('#apply-price-filter'); // remove me
+    // this.applyQtyFilterBtn = document.querySelector('#apply-qty-filter'); // remove me
+
+    this.minPriceInput = document.querySelector('#min-price');
+    this.maxPriceInput = document.querySelector('#max-price');
+    this.minQtyInput = document.querySelector('#min-qty');
+    this.maxQtyInput = document.querySelector('#max-qty');
+
     this.removeFiltersBtn = document.querySelector('#remove-filters');
     this.addFilters = document.querySelector('#add-filters-placeholder');
     this.handleEvents();
   }
 
   handleEvents() {
-    // document.addEventListener('DOMContentLoaded', this.renderFilters);
-    this.applyPriceFilterBtn
-      .addEventListener('click', this.controller.filterByPrice.bind(this.controller));
-    // .addEventListener('click', this.getMinMaxPrice.bind(this));
-    this.applyQtyFilterBtn
-      .addEventListener('click', this.controller.filterByQty.bind(this.controller));
+    // this.applyPriceFilterBtn
+    //   .addEventListener('click', this.controller.filterByPrice.bind(this.controller)); // remove US!
+    // this.applyQtyFilterBtn
+    //   .addEventListener('click', this.controller.filterByQty.bind(this.controller));
+    // this.removeFiltersBtn
+    //   .addEventListener('click', this.controller.removeFilters.bind(this.controller));
+    // document.addEventListener('DOMContentLoaded', this.renderFilters.bind(this));
+
+    this.minPriceInput
+      .addEventListener('input', this.controller.filterByPrice.bind(this.controller));
+    this.maxPriceInput
+      .addEventListener('input', this.controller.filterByPrice.bind(this.controller));
+    this.minQtyInput
+      .addEventListener('input', this.controller.filterByQty.bind(this.controller));
+    this.maxQtyInput
+      .addEventListener('input', this.controller.filterByQty.bind(this.controller));
+
     this.removeFiltersBtn
       .addEventListener('click', this.controller.removeFilters.bind(this.controller));
     document.addEventListener('DOMContentLoaded', this.renderFilters.bind(this));
-    //   .addEventListener('click', this.sayToRemoveFilters.bind(this));
-    // document.addEventListener('DOMContentLoaded', this.renderFilters.bind(this));
   }
 
   renderFilters() {

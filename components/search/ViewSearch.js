@@ -8,7 +8,7 @@ export class ViewSearch {
     this.searchBar = document.querySelector('#searchbar-placeholder');
     // document.addEventListener('DOMContentLoaded', this.renderSearchBar);
     this.searchInput = document.querySelector('#search-input');
-    this.searchInput.addEventListener('input', this.controller.filterProducts.bind(this.controller)); // remove me!!!
+    this.searchInput.addEventListener('input', this.controller.filterProducts.bind(this.controller));
     // this.renderSearchBar();
   }
 

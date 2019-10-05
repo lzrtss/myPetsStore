@@ -1,0 +1,54 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position:relative; 
+}
+
+#main-container {
+  min-height: 80vh;
+}
+
+/* Main navbar */
+#cart-number {
+  top: -1.25rem;
+  left: -.5rem;
+}
+
+/* Product card */
+.inner {
+  overflow: hidden;
+}
+
+.inner img {
+  transition: all 1.5s ease;
+  /* height: 250px;
+  width: 300px; */
+}
+
+.inner:hover img {
+  transform: scale(1.1);
+}
+
+/* Footer */
+#main-footer { 
+  left: 0;
+  right: 0;
+  bottom: 0; 
+  height: 50px; 
+}
+
+/* Sidebar */
+
+#sidebar,
+#main-sidebar {
+  min-width: 250px;
+}

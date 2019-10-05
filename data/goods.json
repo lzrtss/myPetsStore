@@ -1,0 +1,843 @@
+[
+  {
+    "id": 1,
+    "type": "cat",
+    "url": "data/img/pets/cats/siamskaya.jpg",
+    "name": "Siamese",
+    "price": 100,
+    "quantity": 2,
+    "ageMonth": 1,
+    "weightKg": 5,
+    "color": [
+      "white",
+      "black"
+    ],
+    "gender": "male",
+    "lifetimeYears": 12,
+    "rapacity": true,
+    "fur": "short",
+    "shortLegged": false,
+    "pedigree": true,
+    "trimming": false,
+    "lopiness": false
+  },
+  {
+    "id": 2,
+    "type": "cat",
+    "url": "data/img/pets/cats/balines.jpg",
+    "name": "Balinese",
+    "price": 150,
+    "quantity": 1,
+    "ageMonth": 1,
+    "weightKg": 4,
+    "color": [
+      "white",
+      "black"
+    ],
+    "gender": "female",
+    "lifetimeYears": 12,
+    "rapacity": true,
+    "fur": "long",
+    "shortLegged": false,
+    "pedigree": true,
+    "trimming": false,
+    "lopiness": false
+  },
+  {
+    "id": 3,
+    "type": "cat",
+    "url": "data/img/pets/cats/abussian.jpg",
+    "name": "Abyssinian",
+    "price": 550,
+    "quantity": 5,
+    "ageMonth": 1,
+    "weightKg": 5,
+    "color": [
+      "sorrel",
+      "faun",
+      "blue"
+    ],
+    "gender": "female",
+    "lifetimeYears": 15,
+    "rapacity": true,
+    "fur": "short",
+    "shortLegged": false,
+    "pedigree": true,
+    "trimming": false,
+    "lopiness": false
+  },
+  {
+    "id": 4,
+    "type": "cat",
+    "url": "data/img/pets/cats/bambino.jpg",
+    "name": "Bambino",
+    "price": 1550,
+    "quantity": 1,
+    "ageMonth": 1,
+    "weightKg": 3,
+    "color": [
+      "white",
+      "black"
+    ],
+    "gender": "female",
+    "lifetimeYears": 10,
+    "rapacity": true,
+    "fur": "bald",
+    "shortLegged": false,
+    "pedigree": true,
+    "trimming": false,
+    "lopiness": true
+  },
+  {
+    "id": 5,
+    "type": "cat",
+    "url": "data/img/pets/cats/bobtail.jpg",
+    "name": "American Bobtail",
+    "price": 1550,
+    "quantity": 1,
+    "ageMonth": 1,
+    "weightKg": 6,
+    "color": [
+      "wild"
+    ],
+    "gender": "male",
+    "lifetimeYears": 15,
+    "rapacity": true,
+    "fur": "short",
+    "shortLegged": false,
+    "pedigree": true,
+    "trimming": true,
+    "lopiness": false
+  },
+  {
+    "id": 6,
+    "type": "cat",
+    "url": "data/img/pets/cats/bengal.jpg",
+    "name": "Bengal",
+    "price": 1650,
+    "quantity": 2,
+    "ageMonth": 2,
+    "weightKg": 5,
+    "color": [
+      "wild"
+    ],
+    "gender": "male",
+    "lifetimeYears": 15,
+    "rapacity": true,
+    "fur": "short",
+    "shortLegged": false,
+    "pedigree": true,
+    "trimming": true,
+    "lopiness": false
+  },
+  {
+    "id": 7,
+    "type": "cat",
+    "url": "data/img/pets/cats/mainecoon.jpg",
+    "name": "Maine Coon",
+    "price": 1750,
+    "quantity": 1,
+    "ageMonth": 1,
+    "weightKg": 8,
+    "color": [
+      "wild"
+    ],
+    "gender": "male",
+    "lifetimeYears": 15,
+    "rapacity": true,
+    "fur": "long",
+    "shortLegged": false,
+    "pedigree": true,
+    "trimming": true,
+    "lopiness": false
+  },
+  {
+    "id": 8,
+    "type": "cat",
+    "url": "data/img/pets/cats/exoticshorthair.jpg",
+    "name": "Exotic Shorthair",
+    "price": 900,
+    "quantity": 3,
+    "ageMonth": 2,
+    "weightKg": 4,
+    "color": [
+      "wild"
+    ],
+    "gender": "female",
+    "lifetimeYears": 13,
+    "rapacity": true,
+    "fur": "long",
+    "shortLegged": false,
+    "pedigree": true,
+    "trimming": true,
+    "lopiness": false
+  },
+  {
+    "id": 9,
+    "type": "cat",
+    "url": "data/img/pets/cats/korat.jpg",
+    "name": "Korat",
+    "price": 850,
+    "quantity": 6,
+    "ageMonth": 2,
+    "weightKg": 4,
+    "color": [
+      "wild"
+    ],
+    "gender": "male",
+    "lifetimeYears": 15,
+    "rapacity": true,
+    "fur": "short",
+    "shortLegged": false,
+    "pedigree": true,
+    "trimming": true,
+    "lopiness": false
+  },
+  {
+    "id": 10,
+    "type": "cat",
+    "url": "data/img/pets/cats/peterbald.jpg",
+    "name": "Peterbald",
+    "price": 650,
+    "quantity": 1,
+    "ageMonth": 1,
+    "weightKg": 2,
+    "color": [
+      "wild"
+    ],
+    "gender": "male",
+    "lifetimeYears": 15,
+    "rapacity": true,
+    "fur": "short",
+    "shortLegged": false,
+    "pedigree": true,
+    "trimming": true,
+    "lopiness": false
+  },
+  {
+    "id": 11,
+    "type": "dog",
+    "url": "data/img/pets/dogs/bulldog.jpg",
+    "name": "English Bulldog",
+    "price": 650,
+    "quantity": 2,
+    "ageMonth": 1,
+    "weightKg": 25,
+    "color": [
+      "smut"
+    ],
+    "gender": "male",
+    "lifetimeYears": 13,
+    "rapacity": true,
+    "fur": "short",
+    "shortLegged": true,
+    "pedigree": true,
+    "trimming": true,
+    "specialization": "domastic"
+  },
+  {
+    "id": 12,
+    "type": "dog",
+    "url": "data/img/pets/dogs/doberman.jpg",
+    "name": "Doberman",
+    "price": 2650,
+    "quantity": 1,
+    "ageMonth": 1,
+    "weightKg": 40,
+    "color": [
+      "black",
+      "red"
+    ],
+    "gender": "male",
+    "lifetimeYears": 20,
+    "rapacity": true,
+    "fur": "short",
+    "shortLegged": false,
+    "pedigree": true,
+    "trimming": true,
+    "specialization": "domastic"
+  },
+  {
+    "id": 13,
+    "type": "dog",
+    "url": "data/img/pets/dogs/kitayskaya.jpg",
+    "name": "Chinese Crested",
+    "price": 5650,
+    "quantity": 4,
+    "ageMonth": 1,
+    "weightKg": 5,
+    "color": [
+      "black",
+      "red",
+      "white"
+    ],
+    "gender": "male",
+    "lifetimeYears": 7,
+    "rapacity": true,
+    "fur": "short",
+    "shortLegged": false,
+    "pedigree": true,
+    "trimming": false,
+    "specialization": "decorate"
+  },
+  {
+    "id": 14,
+    "type": "dog",
+    "url": "data/img/pets/dogs/ovcharka.jpg",
+    "name": "German Shepherd",
+    "price": 250,
+    "quantity": 10,
+    "ageMonth": 1,
+    "weightKg": 35,
+    "color": [
+      "black",
+      "red"
+    ],
+    "gender": "male",
+    "lifetimeYears": 20,
+    "rapacity": true,
+    "fur": "middle",
+    "shortLegged": false,
+    "pedigree": true,
+    "trimming": true,
+    "specialization": "guard"
+  },
+  {
+    "id": 15,
+    "type": "dog",
+    "url": "data/img/pets/dogs/taksa.jpg",
+    "name": "Dachshund",
+    "price": 950,
+    "quantity": 2,
+    "ageMonth": 1,
+    "weightKg": 9,
+    "color": [
+      "black"
+    ],
+    "gender": "male",
+    "lifetimeYears": 18,
+    "rapacity": true,
+    "fur": "short",
+    "shortLegged": true,
+    "pedigree": true,
+    "trimming": false,
+    "specialization": "hunting"
+  },
+  {
+    "id": 16,
+    "type": "dog",
+    "url": "data/img/pets/dogs/pug.jpg",
+    "name": "Pug",
+    "price": 750,
+    "quantity": 3,
+    "ageMonth": 1,
+    "weightKg": 7,
+    "color": [
+      "black"
+    ],
+    "gender": "male",
+    "lifetimeYears": 16,
+    "rapacity": true,
+    "fur": "short",
+    "shortLegged": true,
+    "pedigree": true,
+    "trimming": false,
+    "specialization": "decorate"
+  },
+  {
+    "id": 17,
+    "type": "dog",
+    "url": "data/img/pets/dogs/beagle.jpg",
+    "name": "Beagle",
+    "price": 950,
+    "quantity": 3,
+    "ageMonth": 1,
+    "weightKg": 3,
+    "color": [
+      "black"
+    ],
+    "gender": "female",
+    "lifetimeYears": 17,
+    "rapacity": true,
+    "fur": "short",
+    "shortLegged": true,
+    "pedigree": true,
+    "trimming": false,
+    "specialization": "decorate"
+  },
+  {
+    "id": 18,
+    "type": "dog",
+    "url": "data/img/pets/dogs/poodle.jpg",
+    "name": "Poodle",
+    "price": 1050,
+    "quantity": 1,
+    "ageMonth": 2,
+    "weightKg": 4,
+    "color": [
+      "black"
+    ],
+    "gender": "female",
+    "lifetimeYears": 16,
+    "rapacity": true,
+    "fur": "long",
+    "shortLegged": true,
+    "pedigree": true,
+    "trimming": false,
+    "specialization": "decorate"
+  },
+  {
+    "id": 19,
+    "type": "dog",
+    "url": "data/img/pets/dogs/americanbully.jpg",
+    "name": "American Bully",
+    "price": 1550,
+    "quantity": 2,
+    "ageMonth": 2,
+    "weightKg": 4,
+    "color": [
+      "brown"
+    ],
+    "gender": "male",
+    "lifetimeYears": 18,
+    "rapacity": true,
+    "fur": "short",
+    "shortLegged": true,
+    "pedigree": true,
+    "trimming": false,
+    "specialization": "guard"
+  },
+  {
+    "id": 20,
+    "type": "dog",
+    "url": "data/img/pets/dogs/papillon.jpg",
+    "name": "Papillon",
+    "price": 1700,
+    "quantity": 1,
+    "ageMonth": 1,
+    "weightKg": 3,
+    "color": [
+      "white"
+    ],
+    "gender": "male",
+    "lifetimeYears": 18,
+    "rapacity": true,
+    "fur": "short",
+    "shortLegged": true,
+    "pedigree": true,
+    "trimming": false,
+    "specialization": "decorate"
+  },
+  {
+    "id": 21,
+    "type": "fish",
+    "url": "data/img/pets/fish/astronotus.jpg",
+    "name": "Astronotus",
+    "price": 50,
+    "quantity": 15,
+    "ageMonth": 5,
+    "weightKg": 0.1,
+    "color": [
+      "velvety",
+      "brown"
+    ],
+    "gender": "male",
+    "lifetimeYears": 20,
+    "rapacity": true,
+    "freshwater": true,
+    "zonality": [
+      "up",
+      "mid"
+    ]
+  },
+  {
+    "id": 22,
+    "type": "fish",
+    "url": "data/img/pets/fish/coryphaena.jpg",
+    "name": "Coryphaena hippurus",
+    "price": 220,
+    "quantity": 5,
+    "ageMonth": 2,
+    "weightKg": 22,
+    "color": [
+      "gold"
+    ],
+    "gender": "male",
+    "lifetimeYears": 7,
+    "rapacity": true,
+    "freshwater": false,
+    "zonality": [
+      "up",
+      "mid"
+    ]
+  },
+  {
+    "id": 23,
+    "type": "fish",
+    "url": "data/img/pets/fish/betta.jpg",
+    "name": "Betta splendens",
+    "price": 920,
+    "quantity": 5,
+    "ageMonth": 2,
+    "weightKg": 0.2,
+    "color": [
+      "blue",
+      "red"
+    ],
+    "gender": "male",
+    "lifetimeYears": 3,
+    "rapacity": true,
+    "freshwater": true,
+    "zonality": [
+      "up",
+      "mid"
+    ]
+  },
+  {
+    "id": 24,
+    "type": "fish",
+    "url": "data/img/pets/fish/ancistrus.jpg",
+    "name": "Ancistrus",
+    "price": 20,
+    "quantity": 50,
+    "ageMonth": 8,
+    "weightKg": 0.5,
+    "color": [
+      "yellow",
+      "grey"
+    ],
+    "gender": "male",
+    "lifetimeYears": 5,
+    "rapacity": false,
+    "freshwater": true,
+    "zonality": [
+      "down"
+    ]
+  },
+  {
+    "id": 25,
+    "type": "fish",
+    "url": "data/img/pets/fish/guppi.jpg",
+    "name": "Guppi",
+    "price": 10,
+    "quantity": 2,
+    "ageMonth": 1,
+    "weightKg": 0.1,
+    "color": [
+      "yellow",
+      "grey",
+      "blue",
+      "red"
+    ],
+    "gender": "male",
+    "lifetimeYears": 1,
+    "rapacity": false,
+    "freshwater": true,
+    "zonality": [
+      "up"
+    ]
+  },
+  {
+    "id": 26,
+    "type": "fish",
+    "url": "data/img/pets/fish/goldfish.jpg",
+    "name": "Goldfish",
+    "price": 15,
+    "quantity": 7,
+    "ageMonth": 1,
+    "weightKg": 0.1,
+    "color": [
+      "gold"
+    ],
+    "gender": "male",
+    "lifetimeYears": 1,
+    "rapacity": false,
+    "freshwater": true,
+    "zonality": [
+      "up"
+    ]
+  },
+  {
+    "id": 27,
+    "type": "fish",
+    "url": "data/img/pets/fish/dwarfgourami.jpg",
+    "name": "Dwarf gourami",
+    "price": 35,
+    "quantity": 2,
+    "ageMonth": 1,
+    "weightKg": 0.1,
+    "color": [
+      "red",
+      "gold",
+      "green"
+    ],
+    "gender": "male",
+    "lifetimeYears": 1,
+    "rapacity": false,
+    "freshwater": true,
+    "zonality": [
+      "down"
+    ]
+  },
+  {
+    "id": 28,
+    "type": "fish",
+    "url": "data/img/pets/fish/pygmycorydoras.jpg",
+    "name": "Pygmy corydoras",
+    "price": 5,
+    "quantity": 8,
+    "ageMonth": 1,
+    "weightKg": 0.1,
+    "color": [
+      "grey"
+    ],
+    "gender": "female",
+    "lifetimeYears": 1,
+    "rapacity": false,
+    "freshwater": true,
+    "zonality": [
+      "up"
+    ]
+  },
+  {
+    "id": 29,
+    "type": "fish",
+    "url": "data/img/pets/fish/pearldanio.jpg",
+    "name": "Pearl danio",
+    "price": 20,
+    "quantity": 25,
+    "ageMonth": 1,
+    "weightKg": 0.1,
+    "color": [
+      "yellow",
+      "grey",
+      "blue",
+      "red"
+    ],
+    "gender": "female",
+    "lifetimeYears": 1,
+    "rapacity": false,
+    "freshwater": true,
+    "zonality": [
+      "up"
+    ]
+  },
+  {
+    "id": 30,
+    "type": "fish",
+    "url": "data/img/pets/fish/kamfa.jpg",
+    "name": "Kamfa",
+    "price": 75,
+    "quantity": 2,
+    "ageMonth": 1,
+    "weightKg": 0.1,
+    "color": [
+      "blue",
+      "red"
+    ],
+    "gender": "female",
+    "lifetimeYears": 1,
+    "rapacity": false,
+    "freshwater": true,
+    "zonality": [
+      "up"
+    ]
+  },
+  {
+    "id": 31,
+    "type": "bird",
+    "url": "data/img/pets/bird/canary.jpg",
+    "name": "Canary",
+    "price": 50,
+    "quantity": 2,
+    "ageMonth": 4,
+    "weightKg": 0.5,
+    "color": [
+      "orange"
+    ],
+    "gender": "female",
+    "lifetimeYears": 5,
+    "rapacity": false,
+    "flying": true,
+    "talking": false,
+    "singing": true
+  },
+  {
+    "id": 32,
+    "type": "bird",
+    "url": "data/img/pets/bird/aratingi.jpg",
+    "name": "Aratingi",
+    "price": 100,
+    "quantity": 2,
+    "ageMonth": 2,
+    "weightKg": 0.5,
+    "color": [
+      "yellow",
+      "green",
+      "red",
+      "blue"
+    ],
+    "gender": "female",
+    "lifetimeYears": 5,
+    "rapacity": false,
+    "flying": true,
+    "talking": false,
+    "singing": true
+  },
+  {
+    "id": 33,
+    "type": "bird",
+    "url": "data/img/pets/bird/сockatoo.jpg",
+    "name": "Cockatoo",
+    "price": 2000,
+    "quantity": 4,
+    "ageMonth": 12,
+    "weightKg": 1,
+    "color": [
+      "white"
+    ],
+    "gender": "female",
+    "lifetimeYears": 80,
+    "rapacity": false,
+    "flying": true,
+    "talking": true,
+    "singing": true
+  },
+  {
+    "id": 34,
+    "type": "bird",
+    "url": "data/img/pets/bird/sova.jpg",
+    "name": "Owl",
+    "price": 6000,
+    "quantity": 1,
+    "ageMonth": 12,
+    "weightKg": 1,
+    "color": [
+      "grey"
+    ],
+    "gender": "male",
+    "lifetimeYears": 20,
+    "rapacity": true,
+    "flying": true,
+    "talking": false,
+    "singing": true
+  },
+  {
+    "id": 35,
+    "type": "bird",
+    "url": "data/img/pets/bird/jaco.jpg",
+    "name": "Jaco",
+    "price": 600,
+    "quantity": 4,
+    "ageMonth": 1,
+    "weightKg": 2,
+    "color": [
+      "grey",
+      "red",
+      "white"
+    ],
+    "gender": "male",
+    "lifetimeYears": 15,
+    "rapacity": false,
+    "flying": true,
+    "talking": false,
+    "singing": false
+  },
+  {
+    "id": 36,
+    "type": "bird",
+    "url": "data/img/pets/bird/monkparakeet.jpg",
+    "name": "Monk parakeet",
+    "price": 900,
+    "quantity": 2,
+    "ageMonth": 1,
+    "weightKg": 1,
+    "color": [
+      "grey"
+    ],
+    "gender": "male",
+    "lifetimeYears": 15,
+    "rapacity": false,
+    "flying": true,
+    "talking": false,
+    "singing": true
+  },
+  {
+    "id": 37,
+    "type": "bird",
+    "url": "data/img/pets/bird/bluewinged.jpg",
+    "name": "Blue-winged",
+    "price": 1500,
+    "quantity": 1,
+    "ageMonth": 1,
+    "weightKg": 1,
+    "color": [
+      "red",
+      "blue"
+    ],
+    "gender": "female",
+    "lifetimeYears": 15,
+    "rapacity": false,
+    "flying": true,
+    "talking": false,
+    "singing": true
+  },
+  {
+    "id": 38,
+    "type": "bird",
+    "url": "data/img/pets/bird/westernrosella.jpg",
+    "name": "Western rosella",
+    "price": 850,
+    "quantity": 3,
+    "ageMonth": 1,
+    "weightKg": 1,
+    "color": [
+      "red",
+      "blue"
+    ],
+    "gender": "male",
+    "lifetimeYears": 12,
+    "rapacity": false,
+    "flying": true,
+    "talking": false,
+    "singing": false
+  },
+  {
+    "id": 39,
+    "type": "bird",
+    "url": "data/img/pets/bird/jandayaparakeet.jpg",
+    "name": "Jandaya parakeet",
+    "price": 1150,
+    "quantity": 1,
+    "ageMonth": 1,
+    "weightKg": 1,
+    "color": [
+      "green"
+    ],
+    "gender": "male",
+    "lifetimeYears": 12,
+    "rapacity": false,
+    "flying": true,
+    "talking": false,
+    "singing": true
+  },
+  {
+    "id": 40,
+    "type": "bird",
+    "url": "data/img/pets/bird/magpie.jpg",
+    "name": "Magpie",
+    "price": 350,
+    "quantity": 3,
+    "ageMonth": 1,
+    "weightKg": 2,
+    "color": [
+      "black"
+    ],
+    "gender": "male",
+    "lifetimeYears": 6,
+    "rapacity": false,
+    "flying": true,
+    "talking": false,
+    "singing": false
+  }
+]

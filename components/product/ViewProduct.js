@@ -15,12 +15,5 @@ export class ViewProduct {
     products.forEach(product => {
       this.templater.load(product, this.output);
     });
-
-    localStorage.setItem('curFilteredProducts', JSON.stringify(products));
-  }
-
-  showCurrentProducts() {
-    const curFilteredProducts = JSON.parse(localStorage.getItem('curFilteredProducts'));
-    console.log(curFilteredProducts); // DON'T FORGET TO REMOVE ME!
   }
 }

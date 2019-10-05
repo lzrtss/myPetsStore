@@ -10,20 +10,6 @@ export class ControllerFilter {
     this.observer.subscribe('Category was chosen', this.chooseAddFilters.bind(this));
   }
 
-  // chooseFilters(category) {
-  //   // some logic that helps to define additional folters depending on category and send them for rendering
-  //   this.model.chooseFilters(category);
-  // }
-
-  // showAddFilters(category) {
-  //   // some logic that helps to define additional folters depending on category and send them for rendering
-  //   this.model.chooseFilters(category);
-  // }
-
-  // sendFiltersToRender(category) {
-  //   this.view.renderFilters(category);
-  // }
-
   chooseAddFilters(category) {
     this.model.chooseAddFilters(category);
     this.renderAddFilter(category); // ???

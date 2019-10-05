@@ -23,7 +23,6 @@ export class ModelProduct {
       .then(products => {
         let filter = products.filter(prodObj => prodObj.statusFilter.length === 0)
         sendProductsToRender(filter);
-        return filter;
       });
   }
 }

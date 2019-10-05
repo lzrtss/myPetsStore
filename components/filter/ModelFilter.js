@@ -3,14 +3,10 @@ export class ModelFilter {
     this.controller = contr;
   }
 
-  // chooseFilters(category) {
-  //   // some logic...
-  //   console.log('Choosing additional filters for', category); // DON'T FORGET TO REMOVE ME!
-  //   this.controller.sendFiltersToRender(category);
-  // }
-
   chooseAddFilters(category) {
-    console.log('rendering filters for', category);
+
+    console.log('rendering filters for', category); // REMOVE ME!
+
     this.controller.renderAddFilter(category);
     // define which additional filters should be rendered
     // this.controller.renderAddFilters(category)
@@ -19,6 +15,10 @@ export class ModelFilter {
   filterByPrice(min, max) {
     min = parseInt(min) || 0;
     max = parseInt(max) || 6000;
+
+    if (min > max) {
+      max = 6000;
+    }
 
     if (min <= max) {
       const products = JSON.parse(localStorage.getItem('products'));
@@ -45,6 +45,10 @@ export class ModelFilter {
     min = parseInt(min) || 0;
     max = parseInt(max) || 50;
 
+    if (min > max) {
+      max = 50;
+    }
+
     if (min <= max) {
       const products = JSON.parse(localStorage.getItem('products'));
 
@@ -66,6 +70,7 @@ export class ModelFilter {
   }
 
   addFilterProducts(e) {
+
     console.log('Done'); // REMOVE ME!
 
     const products = JSON.parse(localStorage.getItem('products'));
@@ -77,6 +82,7 @@ export class ModelFilter {
       }
 
       // conditions for each category
+
       console.log(e.target.classList); // REMOVE ME!
 
       if (e.target.classList.contains('gender')) {

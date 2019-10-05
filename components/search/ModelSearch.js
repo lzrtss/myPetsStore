@@ -13,7 +13,7 @@ export class ModelSearch {
       if (index !== -1) {
         product.statusFilter.splice(index, 1);
       }
-      if (product.name.indexOf(phrase) === -1) {
+      if (product.name.toLowerCase().indexOf(phrase.toLowerCase()) === -1) {
         product.statusFilter.push('search');
       }
     });

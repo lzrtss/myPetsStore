@@ -1,10 +1,10 @@
-import Templater from '../../src/Templater.js';
+// import Templater from '../../src/Templater.js';
 
 export class ViewSearch {
   constructor(contr, observer) {
     this.observer = observer;
     this.controller = contr;
-    this.templater = new Templater('./components/search/Search.html');
+    // this.templater = new Templater('./components/search/Search.html');
     this.searchBar = document.querySelector('#searchbar-placeholder');
     // document.addEventListener('DOMContentLoaded', this.renderSearchBar);
     this.searchBtn = document.querySelector('#search-btn');

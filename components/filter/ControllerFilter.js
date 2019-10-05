@@ -9,12 +9,10 @@ export class ControllerFilter {
     this.view = new ViewFilter(this);
     this.observer.subscribe('CategoryChosen', this.chooseAddFilters.bind(this));
     this.observer.subscribe('ShowAdditionalFilters', this.sendAddFiltersToRender.bind(this));
-    // this.observer.subscribe('CategoryChosen', this.chooseAddFilters.bind(this)); // Can I run this.model.chooseAddFilters(category) directly???
   }
 
   chooseAddFilters(category) { // ???
     const output = this.model.chooseAddFilters(category);
-    // this.model.chooseAddFilters(category);
     this.observer.publish('ShowAdditionalFilters', output);
   }
 
@@ -22,9 +20,11 @@ export class ControllerFilter {
     this.view.renderAddFilter([output, category]);
   }
 
-  additionalFilterProducts() {
-    // const additionFilteredProd = this.model.addFilterProducts();
-    // this.observer.publish('RenderProducts', additionFilteredProd);
+  additionalFilterProducts(checkboxValue) {
+    console.log('Checkbox value:', checkboxValue); // REMOVE ME!
+
+    const additionFilteredProd = this.model.addFilterProducts(checkboxValue);
+    this.observer.publish('RenderProducts', additionFilteredProd);
   }
 
   filterByPrice() {

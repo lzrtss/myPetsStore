@@ -30,9 +30,7 @@ export class ViewFilter {
   }
 
   renderFilters() {
-    // const category = this.controller.getCategory();
-    // console.log(this);
-    // showAddFilters(category);
+    // RENDER MAIN FILTERS!
   }
 
   renderAddFilter([output, category]) { // is it allowed (array as an argument)???
@@ -41,20 +39,9 @@ export class ViewFilter {
     console.log('This is a', category); // REMOVE ME!!!
 
     const addFilterBtns = document.querySelectorAll(`.${category}-add-filter`);
-    [...addFilterBtns].forEach(btn => {
-      btn.addEventListener('changed', this.controller.additionalFilterProducts.bind(this.controller));
-    });
-  }
+    addFilterBtns.forEach(btn => console.log(btn.getAttribute('data-additional-filter')));
 
-  getCategory() {
-    // 1. get products from LS
-    // 2. find product statusFilter prop of which doesn't have: 'category'
-    // 3. return its product.type
-  }
-
-  showAddFilters(category) {
-    // this.controller.chooseAddFilters(category)
-    console.log('Rendering additional filters for', category); // DON'T FORGET TO REMOVE ME!
+    [...addFilterBtns].forEach(btn => btn.addEventListener('change', () => this.controller.additionalFilterProducts(btn.getAttribute('data-additional-filter'))));
   }
 
   getMinMaxPrice() {
@@ -73,8 +60,7 @@ export class ViewFilter {
     return minMaxObj;
   }
 
-
-  sayToRemoveFilters() { // remove!!!
+  sayToRemoveFilters() {
     this.controller.removeFilters();
   }
 }

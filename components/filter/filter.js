@@ -28,13 +28,13 @@ export const additionalFiltersCats = `
 <form id="add-filters-cats" class="d-flex flex-column my-2 my-lg-0">
   <h6 class="font-italic">Gender:</h6>
   <div class="form-check">
-    <input class="cat-add-filter gender form-check-input" type="checkbox" value="male" id="male">
+    <input class="cat-add-filter gender form-check-input" type="checkbox" value="male" id="male" data-additional-filter="male">
     <label class="form-check-label" for="male">
       male
     </label>
   </div>
   <div class="form-check">
-    <input class="cat-add-filter gender form-check-input" type="checkbox" value="female" id="female">
+    <input class="cat-add-filter gender form-check-input" type="checkbox" value="female" id="female" data-additional-filter="female">
     <label class="form-check-label" for="female">
       female
     </label>
@@ -42,25 +42,19 @@ export const additionalFiltersCats = `
 
   <h6 class="mt-2 font-italic">Hair:</h6>
   <div class="form-check">
-    <input class="cat-add-filter fur form-check-input" type="checkbox" value="bald" id="bald">
+    <input class="cat-add-filter fur form-check-input" type="checkbox" value="bald" id="bald" data-additional-filter="bald">
     <label class="form-check-label" for="bald">
       bald
     </label>
   </div>
   <div class="form-check">
-    <input class="cat-add-filter fur form-check-input" type="checkbox" value="short" id="short">
+    <input class="cat-add-filter fur form-check-input" type="checkbox" value="short" id="short" data-additional-filter="short">
     <label class="form-check-label" for="short">
       short
     </label>
   </div>
   <div class="form-check">
-    <input class="cat-add-filter fur form-check-input" type="checkbox" value="middle" id="middle">
-    <label class="form-check-label" for="middle">
-      middle
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="cat-add-filter fur form-check-input" type="checkbox" value="long" id="long">
+    <input class="cat-add-filter fur form-check-input" type="checkbox" value="long" id="long" data-additional-filter="long">
     <label class="form-check-label" for="long">
       long
     </label>
@@ -74,19 +68,19 @@ export const additionalFiltersDogs = `
   <form id="add-filters-dogs" class="d-flex flex-column my-2 my-lg-0">
     <h6 class="font-italic">Size:</h6>
     <div class="form-check">
-      <input class="dog-add-filter weightKg form-check-input" type="checkbox" value="small" id="small">
+      <input class="dog-add-filter weightKg form-check-input" type="checkbox" value="small" id="small-dogs" data-additional-filter="small">
       <label class="form-check-label" for="small-dogs">
         small (5kg-)
       </label>
     </div>
     <div class="form-check">
-      <input class="dog-add-filter weightKg form-check-input" type="checkbox" value="middle" id="middle">
+      <input class="dog-add-filter weightKg form-check-input" type="checkbox" value="middle" id="middle-dogs" data-additional-filter="middle">
       <label class="form-check-label" for="middle-dogs">
         middle (5-25kg)
       </label>
     </div>
     <div class="form-check">
-      <input class="dog-add-filter weightKg form-check-input" type="checkbox" value="big" id="big">
+      <input class="dog-add-filter weightKg form-check-input" type="checkbox" value="big" id="big-dogs" data-additional-filter="big">
       <label class="form-check-label" for="big-dogs">
         big (25kg+)
       </label>
@@ -94,27 +88,27 @@ export const additionalFiltersDogs = `
 
     <h6 class="mt-2 font-italic">Specialization:</h6>
     <div class="form-check">
-      <input class="dog-add-filter specialization form-check-input" type="checkbox" value="decorate" id="decorate">
+      <input class="dog-add-filter specialization form-check-input" type="checkbox" value="decorate" id="decorate" data-additional-filter="decorate">
       <label class="form-check-label" for="decorate">
         decorate
       </label>
     </div>
     <div class="form-check">
-      <input class="dog-add-filter specialization form-check-input" type="checkbox" value="domestic" id="domestic">
+      <input class="dog-add-filter specialization form-check-input" type="checkbox" value="domestic" id="domestic" data-additional-filter="domestic">
       <label class="form-check-label" for="domestic">
         domestic
       </label>
     </div>
     <div class="form-check">
       <input class="dog-add-filter specialization dog-add-filter form-check-input" type="checkbox"
-        value="guard" id="guard">
+        value="guard" id="guard" data-additional-filter="guard">
       <label class="form-check-label" for="guard">
         guard
       </label>
     </div>
     <div class="form-check">
       <input class="dog-add-filter specialization dog-add-filter form-check-input" type="checkbox"
-        value="hunting" id="hunting">
+        value="hunting" id="hunting" data-additional-filter="hunting">
       <label class="form-check-label" for="hunting">
         hunting
       </label>
@@ -128,19 +122,19 @@ export const additionalFiltersFishes = `
 <form id="add-filters-fishes" class="additional-filters d-flex flex-column my-2 my-lg-0">
   <h6 class="font-italic">Zonality:</h6>
   <div class="form-check">
-    <input class="fish-add-filter zonality form-check-input" type="checkbox" value="up" id="up-fishes">
+    <input class="fish-add-filter zonality form-check-input" type="checkbox" value="up" id="up-fishes" data-additional-filter="up">
     <label class="form-check-label" for="up-fishes">
       up
     </label>
   </div>
   <div class="form-check">
-    <input class="fish-add-filter zonality form-check-input" type="checkbox" value="mid" id="middle-fishes">
+    <input class="fish-add-filter zonality form-check-input" type="checkbox" value="mid" id="middle-fishes" data-additional-filter="mid">
     <label class="form-check-label" for="middle-fishes">
       middle
     </label>
   </div>
   <div class="form-check">
-    <input class="fish-add-filter zonality form-check-input" type="checkbox" value="down" id="down-fishes">
+    <input class="fish-add-filter zonality form-check-input" type="checkbox" value="down" id="down-fishes" data-additional-filter="down">
     <label class="form-check-label" for="down-fishes">
       down
     </label>
@@ -148,14 +142,14 @@ export const additionalFiltersFishes = `
 
   <h6 class="mt-2 font-italic">Water:</h6>
   <div class="form-check">
-    <input class="fish-add-filter freshwater form-check-input" type="checkbox" value="true" id="fresh-water">
-    <label class="form-check-label" for="fresh">
+    <input class="fish-add-filter freshwater form-check-input" type="checkbox" value="true" id="fresh-water" data-additional-filter="freshwater">
+    <label class="form-check-label" for="fresh-water">
       fresh-water
     </label>
   </div>
   <div class="form-check">
-    <input class="fish-add-filter freshwater form-check-input" type="checkbox" value="false" id="salt-water">
-    <label class="form-check-label" for="salt">
+    <input class="fish-add-filter freshwater form-check-input" type="checkbox" value="false" id="salt-water" data-additional-filter="saltwater">
+    <label class="form-check-label" for="salt-water">
       salt-water
     </label>
   </div>
@@ -168,13 +162,13 @@ export const additionalFiltersBirds = `
   <form id="add-filters-birds" class="d-flex flex-column my-2 my-lg-0">
     <h6 class="font-italic">Talking:</h6>
     <div class="form-check">
-      <input class="bird-add-filter form-check-input" type="checkbox" value="talk-true" id="talk-true">
+      <input class="bird-add-filter form-check-input" type="checkbox" value="talk-true" id="talk-true" data-additional-filter="talking">
       <label class="form-check-label" for="talk-true">
         can talk
       </label>
     </div>
     <div class="form-check">
-      <input class="bird-add-filter form-check-input" type="checkbox" value="talk-false" id="talk-false">
+      <input class="bird-add-filter form-check-input" type="checkbox" value="talk-false" id="talk-false" data-additional-filter="non-talking">
       <label class="form-check-label" for="talk-false">
         can't talk
       </label>
@@ -182,13 +176,13 @@ export const additionalFiltersBirds = `
 
     <h6 class="mt-2 font-italic">Food:</h6>
     <div class="form-check">
-      <input class="bird-add-filter form-check-input" type="checkbox" value="predatory" id="predatory">
+      <input class="bird-add-filter form-check-input" type="checkbox" value="predatory" id="predatory" data-additional-filter="rapacity">
       <label class="form-check-label" for="predatory">
         predatory
       </label>
     </div>
     <div class="form-check">
-      <input class="bird-add-filter form-check-input" type="checkbox" value="non-predatory" id="non-predatory">
+      <input class="bird-add-filter form-check-input" type="checkbox" value="non-predatory" id="non-predatory" data-additional-filter="non-rapacity">
       <label class="form-check-label" for="non-predatory">
         non-predatory
       </label>

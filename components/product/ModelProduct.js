@@ -3,9 +3,8 @@ export class ModelProduct {
     this.controller = contr;
   }
 
-  getProducts() {
-    // localStorage.removeItem('products');
-    return fetch('./data/goods.json')
+  getProducts(sendProductsToRender) {
+    return fetch('./data/goods.json') // remove in case of using URL
       // return fetch('https://cors-anywhere.herokuapp.com/https://gentle-coast-49966.herokuapp.com/get-goods')
       .then(products => products.json())
       .then(products => {
@@ -22,8 +21,9 @@ export class ModelProduct {
         return products;
       })
       .then(products => {
-        const productsFiltered = products.filter(prodObj => prodObj.statusFilter.length === 0);
-        this.sendProductsToRender(productsFiltered);
+        let filter = products.filter(prodObj => prodObj.statusFilter.length === 0)
+        sendProductsToRender(filter);
+        return filter;
       });
   }
 }

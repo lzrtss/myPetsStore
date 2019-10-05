@@ -1,9 +1,11 @@
 import Templater from '../../src/Templater.js';
 
 export class ViewProduct {
-  constructor(contr) {
+  constructor(contr, observer) {
+    this.observer = observer;
     this.controller = contr;
     this.templater = new Templater('./components/product/Product.html');
+    document.addEventListener('DOMContentLoaded', this.controller.getProducts.bind(this.controller));
     this.output = document.querySelector('#products');
   }
 

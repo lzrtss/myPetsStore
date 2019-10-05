@@ -26,8 +26,6 @@ export const mainFilter = `
 export const additionalFiltersCats = `
 <!-- Sidebar Additional Filters For Cats -->
 <form id="add-filters-cats" class="d-flex flex-column my-2 my-lg-0">
-  <h5 class="mt-3">Cats:</h5>
-
   <h6 class="font-italic">Gender:</h6>
   <div class="form-check">
     <input class="cat-add-filter gender form-check-input" type="checkbox" value="male" id="male">
@@ -74,8 +72,6 @@ export const additionalFiltersCats = `
 export const additionalFiltersDogs = `
 <!-- Sidebar Additional Filters For Dogs -->
   <form id="add-filters-dogs" class="d-flex flex-column my-2 my-lg-0">
-    <h5 class="mt-3">Dogs:</h5>
-
     <h6 class="font-italic">Size:</h6>
     <div class="form-check">
       <input class="dog-add-filter weightKg form-check-input" type="checkbox" value="small" id="small">
@@ -130,8 +126,6 @@ export const additionalFiltersDogs = `
 export const additionalFiltersFishes = `
 <!-- Sidebar Additional Filters For Fishes -->
 <form id="add-filters-fishes" class="additional-filters d-flex flex-column my-2 my-lg-0">
-  <h5 class="mt-3">Fishes:</h5>
-
   <h6 class="font-italic">Zonality:</h6>
   <div class="form-check">
     <input class="fish-add-filter zonality form-check-input" type="checkbox" value="up" id="up-fishes">
@@ -172,8 +166,6 @@ export const additionalFiltersFishes = `
 export const additionalFiltersBirds = `
 <!-- Sidebar Additional Filters For Birds -->
   <form id="add-filters-birds" class="d-flex flex-column my-2 my-lg-0">
-    <h5 class="mt-3">Birds:</h5>
-
     <h6 class="font-italic">Talking:</h6>
     <div class="form-check">
       <input class="bird-add-filter form-check-input" type="checkbox" value="talk-true" id="talk-true">

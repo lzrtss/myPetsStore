@@ -17,13 +17,12 @@ export class ModelFilter {
   }
 
   filterByPrice(min, max) {
-    min = min || 0;
-    max = max || 6000;
+    min = parseInt(min) || 0;
+    max = parseInt(max) || 6000;
 
     if (min <= max) {
-      // get current products array from LS
       const products = JSON.parse(localStorage.getItem('products'));
-      // remove old status and add new status
+
       products.forEach((product) => {
         let index = product.statusFilter.indexOf('filterByPrice');
         if (index !== -1) {
@@ -34,16 +33,17 @@ export class ModelFilter {
         }
       });
 
-      // rewrite products in LS
       localStorage.setItem('products', JSON.stringify(products));
 
       return products.filter(product => product.statusFilter.length === 0);
     }
+
+    return JSON.parse(localStorage.getItem('products'));
   }
 
   filterByQty(min, max) {
-    min = min || 0;
-    max = max || 50;
+    min = parseInt(min) || 0;
+    max = parseInt(max) || 50;
 
     if (min <= max) {
       const products = JSON.parse(localStorage.getItem('products'));
@@ -59,9 +59,10 @@ export class ModelFilter {
       });
 
       localStorage.setItem('products', JSON.stringify(products));
-
       return products.filter(product => product.statusFilter.length === 0);
     }
+
+    return JSON.parse(localStorage.getItem('products'));
   }
 
   addFilterProducts(e) {

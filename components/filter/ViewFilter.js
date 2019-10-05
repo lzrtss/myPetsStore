@@ -6,28 +6,16 @@ export class ViewFilter {
     this.controller = contr;
     // this.templater = new Templater('./components/filter/Filter.html');
 
-    // this.applyPriceFilterBtn = document.querySelector('#apply-price-filter'); // remove me
-    // this.applyQtyFilterBtn = document.querySelector('#apply-qty-filter'); // remove me
-
     this.minPriceInput = document.querySelector('#min-price');
     this.maxPriceInput = document.querySelector('#max-price');
     this.minQtyInput = document.querySelector('#min-qty');
     this.maxQtyInput = document.querySelector('#max-qty');
-
     this.removeFiltersBtn = document.querySelector('#remove-filters');
     this.addFilters = document.querySelector('#add-filters-placeholder');
     this.handleEvents();
   }
 
   handleEvents() {
-    // this.applyPriceFilterBtn
-    //   .addEventListener('click', this.controller.filterByPrice.bind(this.controller)); // remove US!
-    // this.applyQtyFilterBtn
-    //   .addEventListener('click', this.controller.filterByQty.bind(this.controller));
-    // this.removeFiltersBtn
-    //   .addEventListener('click', this.controller.removeFilters.bind(this.controller));
-    // document.addEventListener('DOMContentLoaded', this.renderFilters.bind(this));
-
     this.minPriceInput
       .addEventListener('input', this.controller.filterByPrice.bind(this.controller));
     this.maxPriceInput

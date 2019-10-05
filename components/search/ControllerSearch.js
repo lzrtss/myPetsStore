@@ -12,7 +12,7 @@ export class ControllerSearch {
   filterProducts() {
     const phrase = this.view.getSearchPhrase();
     const filteredProducts = this.model.filterProducts(phrase);
-    this.observer.publish('Products are ready for render', filteredProducts);
+    this.observer.publish('RenderProducts', filteredProducts);
   }
 
   // sendProductsToRender(products) {

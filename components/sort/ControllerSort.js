@@ -12,7 +12,7 @@ export class ControllerSort {
   sortProducts(sortType) {
     const sortedProducts = this.model.sortProducts(sortType);
 
-    this.observer.publish('Products are ready for render', sortedProducts);
+    this.observer.publish('RenderProducts', sortedProducts);
   }
 
   // sendProductsToRender(products) {

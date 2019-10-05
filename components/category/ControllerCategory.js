@@ -13,7 +13,7 @@ export class ControllerCategory {
     console.log(categ); // REMOVE ME!
 
     const filteredProdByCateg = this.model.getProdByCategory(categ);
-    this.observer.publish('Category was chosen', categ);
-    this.observer.publish('Products are ready for render', filteredProdByCateg);
+    this.observer.publish('CategoryChosen', categ);
+    this.observer.publish('RenderProducts', filteredProdByCateg);
   }
 }

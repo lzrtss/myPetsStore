@@ -7,7 +7,7 @@ export class ControllerProduct {
     this.router = router;
     this.model = new ModelProduct(this);
     this.view = new ViewProduct(this);
-    this.observer.subscribe('Products are ready for render', this.sendProductsToRender.bind(this));
+    this.observer.subscribe('RenderProducts', this.sendProductsToRender.bind(this));
   }
 
   getProducts() {

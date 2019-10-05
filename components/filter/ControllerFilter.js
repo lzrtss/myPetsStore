@@ -7,7 +7,7 @@ export class ControllerFilter {
     this.router = router;
     this.model = new ModelFilter(this);
     this.view = new ViewFilter(this);
-    this.observer.subscribe('Category was chosen', this.chooseAddFilters.bind(this));
+    this.observer.subscribe('CategoryChosen', this.chooseAddFilters.bind(this));
   }
 
   chooseAddFilters(category) {
@@ -18,18 +18,18 @@ export class ControllerFilter {
   filterByPrice() {
     const minMaxObj = this.view.getMinMaxPrice();
     const filteredProducts = this.model.filterByPrice(minMaxObj.minPrice, minMaxObj.maxPrice);
-    this.observer.publish('Products are ready for render', filteredProducts);
+    this.observer.publish('RenderProducts', filteredProducts);
   }
 
   filterByQty() {
     const minMaxObj = this.view.getMinMaxQty();
     const filteredProducts = this.model.filterByQty(minMaxObj.minQty, minMaxObj.maxQty);
-    this.observer.publish('Products are ready for render', filteredProducts);
+    this.observer.publish('RenderProducts', filteredProducts);
   }
 
   removeFilters() {
     const allProducts = this.model.getAllProducts();
-    this.observer.publish('Products are ready for render', allProducts);
+    this.observer.publish('RenderProducts', allProducts);
   }
 
   renderAddFilter(category) {

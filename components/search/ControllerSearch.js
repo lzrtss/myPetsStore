@@ -14,8 +14,4 @@ export class ControllerSearch {
     const filteredProducts = this.model.filterProducts(phrase);
     this.observer.publish('RenderProducts', filteredProducts);
   }
-
-  // sendProductsToRender(products) {
-  //   this.router.sendProductsToRender(products);
-  // }
 }

@@ -1,5 +1,4 @@
 // import Templater from '../../src/Templater.js';
-import { additionalFiltersCats, additionalFiltersDogs, additionalFiltersFishes, additionalFiltersBirds } from './filter.js';
 
 export class ViewFilter {
   constructor(contr) {
@@ -36,25 +35,15 @@ export class ViewFilter {
     // showAddFilters(category);
   }
 
-  renderAddFilter(category) {
-    if (category === 'all') {
-      this.addFilters.innerHTML = '';
-    } else if (category === 'cat') {
-      this.addFilters.innerHTML = additionalFiltersCats;
-    } else if (category === 'dog') {
-      this.addFilters.innerHTML = additionalFiltersDogs;
-    } else if (category === 'fish') {
-      this.addFilters.innerHTML = additionalFiltersFishes;
-    } else if (category === 'bird') {
-      this.addFilters.innerHTML = additionalFiltersBirds;
-    }
+  renderAddFilter([output, category]) { // is it allowed (array as an argument)???
+    this.addFilters.innerHTML = output;
+
+    console.log('This is a', category); // REMOVE ME!!!
 
     const addFilterBtns = document.querySelectorAll(`.${category}-add-filter`);
-
-    // [...addFilterBtns].forEach(btn => {
-    //   btn.addEventListener('changed', this.model.addFilterProducts.bind(this.model));
-    // })
-    // this.model.addFilterProducts(category);
+    [...addFilterBtns].forEach(btn => {
+      btn.addEventListener('changed', this.controller.additionalFilterProducts.bind(this.controller));
+    });
   }
 
   getCategory() {

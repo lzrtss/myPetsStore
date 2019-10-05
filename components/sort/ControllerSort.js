@@ -14,8 +14,4 @@ export class ControllerSort {
 
     this.observer.publish('RenderProducts', sortedProducts);
   }
-
-  // sendProductsToRender(products) {
-  //   this.router.sendProductsToRender(products);
-  // }
 }

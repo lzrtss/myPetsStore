@@ -13,7 +13,7 @@ export class ViewCategory {
   handleEvents() {
     const navbarBtns = document.querySelectorAll('.category-btn');
     [...navbarBtns].forEach(btn => btn
-      .addEventListener('click', () => this.controller.startFilterByCateg(btn.getAttribute('data-categ-type'))));
+      .addEventListener('click', () => this.controller.filterByCategory(btn.getAttribute('data-categ-type'))));
   }
 
   getCategory(e) {

@@ -9,11 +9,9 @@ export class ControllerCategory {
     this.view = new ViewCategory(this);
   }
 
-  startFilterByCateg(categ) {
-    console.log(categ); // REMOVE ME!
-
-    const filteredProdByCateg = this.model.getProdByCategory(categ);
-    this.observer.publish('CategoryChosen', categ);
+  filterByCategory(category) {
+    const filteredProdByCateg = this.model.getProdByCategory(category);
+    this.observer.publish('CategoryChosen', category);
     this.observer.publish('RenderProducts', filteredProdByCateg);
   }
 }

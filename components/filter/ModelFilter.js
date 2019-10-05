@@ -1,3 +1,5 @@
+import { additionalFiltersCats, additionalFiltersDogs, additionalFiltersFishes, additionalFiltersBirds } from './filter.js';
+
 export class ModelFilter {
   constructor(contr) {
     this.controller = contr;
@@ -7,9 +9,24 @@ export class ModelFilter {
 
     console.log('rendering filters for', category); // REMOVE ME!
 
-    this.controller.renderAddFilter(category);
+    // this.controller.sendAddFiltersToRender(category);
     // define which additional filters should be rendered
     // this.controller.renderAddFilters(category)
+    let output;
+
+    if (category === 'all') {
+      output = '';
+    } else if (category === 'cat') {
+      output = additionalFiltersCats;
+    } else if (category === 'dog') {
+      output = additionalFiltersDogs;
+    } else if (category === 'fish') {
+      output = additionalFiltersFishes;
+    } else if (category === 'bird') {
+      output = additionalFiltersBirds;
+    }
+
+    return [output, category];
   }
 
   filterByPrice(min, max) {

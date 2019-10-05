@@ -7,8 +7,8 @@ export class ViewSearch {
     // this.templater = new Templater('./components/search/Search.html');
     this.searchBar = document.querySelector('#searchbar-placeholder');
     // document.addEventListener('DOMContentLoaded', this.renderSearchBar);
-    this.searchBtn = document.querySelector('#search-btn');
-    this.searchBtn.addEventListener('click', this.controller.filterProducts.bind(this.controller));
+    this.searchInput = document.querySelector('#search-input');
+    this.searchInput.addEventListener('input', this.controller.filterProducts.bind(this.controller)); // remove me!!!
     // this.renderSearchBar();
   }
 

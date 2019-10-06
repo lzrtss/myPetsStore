@@ -1,7 +1,11 @@
-export class ModelCard {
+export class ModelCart {
   constructor(contr) {
     this.controller = contr;
   }
-}
 
-// window.addEventListener('DOMContentLoaded', Controller.render);
+  getAddedProducts() {
+    // some logic
+
+    // return // return addedProducts
+  }
+}

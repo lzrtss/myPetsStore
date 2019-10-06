@@ -1,7 +1,4 @@
 export class ModelSort {
-  constructor(contr) {
-    this.controller = contr;
-  }
 
   sortProducts(sortType) {
     // get current products array from LS
@@ -22,4 +19,5 @@ export class ModelSort {
 
     return products.filter(product => product.statusFilter.length === 0);
   }
+
 }

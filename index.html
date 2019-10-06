@@ -9,6 +9,7 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="./components/cart/cart.css">
   <title>myPets | The Best Pet Store</title>
 </head>
 
@@ -61,8 +62,8 @@
           </ul>
 
           <!-- Shopping cart button -->
-          <button class="nav-link btn px-3" id="cart-btn">
-            <i class="icon-light fas fa-shopping-cart fa-2x fa-inverse"></i>
+          <button class="nav-link btn px-3">
+            <i class="icon-light fas fa-shopping-cart fa-2x fa-inverse" id="cart-btn"></i>
             <span id="cart-number" class="badge badge-danger ml-0">0</span>
           </button>
 
@@ -373,6 +374,10 @@
       </div>
     </div>
   </div>
+
+  <!-- Cart -->
+
+  <div id="cart-placeholder"></div>
 
   <!-- Footer -->
   <footer id="main-footer" class="text-white text-center bg-dark py-3 footer ">

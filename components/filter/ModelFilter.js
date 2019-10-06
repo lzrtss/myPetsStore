@@ -1,9 +1,6 @@
 import { additionalFiltersCats, additionalFiltersDogs, additionalFiltersFishes, additionalFiltersBirds } from './filter.js';
 
 export class ModelFilter {
-  constructor(contr) {
-    this.controller = contr;
-  }
 
   chooseAddFilters(category) {
 
@@ -159,4 +156,5 @@ export class ModelFilter {
     // clearFilterValues();
     // removeAddFilters(); // REMOVE ADDITIONAL FILTERS
   }
+
 }

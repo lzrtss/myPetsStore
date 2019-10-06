@@ -1,7 +1,4 @@
 export class ModelProduct {
-  constructor(contr) {
-    this.controller = contr;
-  }
 
   getProducts(sendProductsToRender) {
     return fetch('./data/goods.json') // remove in case of using URL
@@ -25,4 +22,5 @@ export class ModelProduct {
         sendProductsToRender(filter);
       });
   }
+
 }

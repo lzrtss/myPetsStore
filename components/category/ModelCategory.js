@@ -1,7 +1,4 @@
 export class ModelCategory {
-  constructor(contr) {
-    this.controller = contr;
-  }
 
   getProdByCategory(category) {
     let products = JSON.parse(localStorage.getItem('products'));
@@ -22,4 +19,5 @@ export class ModelCategory {
 
     return products.filter(product => product.statusFilter.length === 0);
   }
+
 }

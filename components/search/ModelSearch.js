@@ -1,8 +1,4 @@
 export class ModelSearch {
-  constructor(contr) {
-    this.controller = contr;
-
-  }
 
   filterProducts(phrase) {
     // get current products array from LS
@@ -23,4 +19,5 @@ export class ModelSearch {
 
     return products.filter(product => product.statusFilter.length === 0);
   }
+
 }

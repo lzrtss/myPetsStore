@@ -55,8 +55,9 @@ export default class Templater {
     const node = domNode;
     let htmlData = this.template;
     for (const key in objProduct) {
-      htmlData = htmlData.replace(`{{${key}}}`, objProduct[key]);
-      // const re = new RegExp(`{{ ${key} }}`, "g");
+      const re = new RegExp(`{{${key}}}`, "g");
+      htmlData = htmlData.replace(re, objProduct[key]);
+
       // htmlData = htmlData.replace(re, objProduct[key]);
     }
     node.innerHTML += htmlData;

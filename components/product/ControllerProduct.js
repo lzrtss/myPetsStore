@@ -17,4 +17,8 @@ export class ControllerProduct {
   sendProductsToRender(products) {
     this.view.render(products);
   }
+
+  addToCart() {
+    console.log('Added to cart');
+  }
 }

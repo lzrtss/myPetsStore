@@ -10,10 +10,13 @@ export class ModelProduct {
         } else {
           products.forEach(prod => {
             prod.statusFilter = [];
+            prod.ordered = 0;
           });
           localStorage.setItem('products', JSON.stringify(products));
           // reset sort
           localStorage.setItem('notSortedProducts', JSON.stringify(products));
+          // empty array of products for cart
+          localStorage.setItem('cartProducts', JSON.stringify([]));
         }
         return products;
       })

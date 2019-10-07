@@ -14,6 +14,19 @@ export class ViewProduct {
 
     products.forEach(product => {
       this.templater.load(product, this.output);
+
+      // document.querySelector('.add-cart-btn')
+      //   .addEventListener('click', this.controller.addToCart.bind(this.controller));
+
     });
+
+
+    // this.addEvents();
+  }
+
+  addEvents() {
+    const cartBtns = document.querySelectorAll('.add-cart-btn');
+    [...cartBtns].forEach(btn =>
+      btn.addEventListener('click', this.controller.addToCart.bind(this.controller)));
   }
 }

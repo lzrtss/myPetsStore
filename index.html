@@ -9,24 +9,21 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <link rel="stylesheet" href="./style/main.css">
-  <link rel="stylesheet" href="./components/cart/cart.css">
+  <link rel="stylesheet" href="./components/cart/cart.scss">
   <title>myPets | The Best Pet Store</title>
 </head>
 
 <body>
-
-  <!-- ============================================================== -->
 
   <div id="navbar-placeholder">
     <!-- Navigation Menu -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
       <div class="container">
 
-        <!-- <a class="navbar-brand" href=""> -->
         <span class="navbar-brand logo-icon">
           <i class="fas fa-paw fa-2x"></i><span class="text-primary font-italic"> my</span>Pets
         </span>
-        <!-- </a> -->
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -63,8 +60,8 @@
 
           <!-- Shopping cart button -->
           <button class="nav-link btn px-3">
-            <i class="icon-light fas fa-shopping-cart fa-2x fa-inverse" id="cart-btn"></i>
-            <span id="cart-number" class="badge badge-danger ml-0">0</span>
+            <i class="icon-light fas fa-shopping-cart fa-2x fa-inverse" data-toggle="modal" data-target="#cartModal" id="cart-btn"></i>
+            <span id="cart-number" class="badge badge-danger ml-0"></span>
           </button>
 
         </div>
@@ -73,7 +70,8 @@
     </nav>
   </div>
 
-  <!-- ====================================================== -->
+  <!-- Cart -->
+  <div id="cart-placeholder"></div>
 
   <div id="searchbar-placeholder">
 
@@ -93,8 +91,6 @@
     <div class="container">
       <div class="row">
 
-        <!-- ======================================================== -->
-
         <div id="sidebar-placeholder" class="col-12 col-sm-6 col-md-4 col-lg-3 w-100">
           <!-- Main Content -->
           <div class="row shadow w-100" id="main-sidebar">
@@ -103,8 +99,6 @@
             <!-- Sidebar (Search & Filters) -->
             <div id="sidebar" class="col-sm-12 col-lg-3">
               <div class="container py-3 w-100">
-
-                <!-- ================================================== -->
 
                 <div id="sort-placeholder">
                   <!-- Sidebar Sort -->
@@ -140,8 +134,6 @@
                   </form>
                 </div>
 
-                <!-- ========================================================== -->
-
                 <div id="main-filters-placeholder">
                   <!-- Sidebar Main Filters -->
                   <form id="main-filters" class="d-flex flex-column form-inline my-lg-0">
@@ -159,192 +151,7 @@
                   </form>
                 </div>
 
-                <!-- ======================================================== -->
-
-                <div id="add-filters-placeholder" class="mt-md-2">
-                  <!-- Sidebar Main Filters -->
-
-                  <!-- Sidebar Additional Filters For Cats -->
-                  <!-- <form id="add-filters-cats" class="d-flex flex-column my-2 my-lg-0">
-                    <h5 class="mt-3">Cats:</h5>
-
-                    <h6 class="font-italic">Gender:</h6>
-                    <div class="form-check">
-                      <input class="cat-add-filter gender form-check-input" type="checkbox" value="male" id="male">
-                      <label class="form-check-label" for="male">
-                        male
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="cat-add-filter gender form-check-input" type="checkbox" value="female" id="female">
-                      <label class="form-check-label" for="female">
-                        female
-                      </label>
-                    </div>
-
-                    <h6 class="mt-2 font-italic">Hair:</h6>
-                    <div class="form-check">
-                      <input class="cat-add-filter fur form-check-input" type="checkbox" value="bald" id="bald">
-                      <label class="form-check-label" for="bald">
-                        bald
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="cat-add-filter fur form-check-input" type="checkbox" value="short" id="short">
-                      <label class="form-check-label" for="short">
-                        short
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="cat-add-filter fur form-check-input" type="checkbox" value="middle" id="middle">
-                      <label class="form-check-label" for="middle">
-                        middle
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="cat-add-filter fur form-check-input" type="checkbox" value="long" id="long">
-                      <label class="form-check-label" for="long">
-                        long
-                      </label>
-                    </div>
-
-                  </form> -->
-
-                  <!-- ---------------------- -->
-
-                  <!-- Sidebar Additional Filters For Dogs -->
-                  <!-- <form id="add-filters-dogs" class="d-flex flex-column my-2 my-lg-0">
-                    <h5 class="mt-3">Dogs:</h5>
-
-                    <h6 class="font-italic">Size:</h6>
-                    <div class="form-check">
-                      <input class="dog-add-filter weightKg form-check-input" type="checkbox" value="small" id="small">
-                      <label class="form-check-label" for="small-dogs">
-                        small (5kg-)
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="dog-add-filter weightKg form-check-input" type="checkbox" value="middle" id="middle">
-                      <label class="form-check-label" for="middle-dogs">
-                        middle (5-25kg)
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="dog-add-filter weightKg form-check-input" type="checkbox" value="big" id="big">
-                      <label class="form-check-label" for="big-dogs">
-                        big (25kg+)
-                      </label>
-                    </div>
-
-                    <h6 class="mt-2 font-italic">Specialization:</h6>
-                    <div class="form-check">
-                      <input class="dog-add-filter specialization form-check-input" type="checkbox" value="decorate" id="decorate">
-                      <label class="form-check-label" for="decorate">
-                        decorate
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="dog-add-filter specialization form-check-input" type="checkbox" value="domestic" id="domestic">
-                      <label class="form-check-label" for="domestic">
-                        domestic
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="dog-add-filter specialization dog-add-filter form-check-input" type="checkbox"
-                        value="guard" id="guard">
-                      <label class="form-check-label" for="guard">
-                        guard
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="dog-add-filter specialization dog-add-filter form-check-input" type="checkbox"
-                        value="hunting" id="hunting">
-                      <label class="form-check-label" for="hunting">
-                        hunting
-                      </label>
-                    </div>
-
-                  </form> -->
-
-                  <!-- ---------------------- -->
-
-                  <!-- Sidebar Additional Filters For Fishes -->
-                  <!-- <form id="add-filters-fishes" class="additional-filters d-flex flex-column my-2 my-lg-0">
-                    <h5 class="mt-3">Fishes:</h5>
-
-                    <h6 class="font-italic">Zonality:</h6>
-                    <div class="form-check">
-                      <input class="fish-add-filter zonality form-check-input" type="checkbox" value="up" id="up-fishes">
-                      <label class="form-check-label" for="up-fishes">
-                        up
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="fish-add-filter zonality form-check-input" type="checkbox" value="mid" id="middle-fishes">
-                      <label class="form-check-label" for="middle-fishes">
-                        middle
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="fish-add-filter zonality form-check-input" type="checkbox" value="down" id="down-fishes">
-                      <label class="form-check-label" for="down-fishes">
-                        down
-                      </label>
-                    </div>
-
-                    <h6 class="mt-2 font-italic">Water:</h6>
-                    <div class="form-check">
-                      <input class="fish-add-filter freshwater form-check-input" type="checkbox" value="true" id="fresh-water">
-                      <label class="form-check-label" for="fresh">
-                        fresh-water
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="fish-add-filter freshwater form-check-input" type="checkbox" value="false" id="salt-water">
-                      <label class="form-check-label" for="salt">
-                        salt-water
-                      </label>
-                    </div>
-
-                  </form> -->
-
-                  <!-- ---------------------- -->
-
-                  <!-- Sidebar Additional Filters For Birds -->
-                  <!-- <form id="add-filters-birds" class="d-flex flex-column my-2 my-lg-0">
-                    <h5 class="mt-3">Birds:</h5>
-
-                    <h6 class="font-italic">Talking:</h6>
-                    <div class="form-check">
-                      <input class="bird-add-filter talking form-check-input" type="checkbox" value="true" id="talk-true">
-                      <label class="form-check-label" for="talk-true">
-                        can talk
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="bird-add-filter talking form-check-input" type="checkbox" value="false" id="talk-false">
-                      <label class="form-check-label" for="talk-false">
-                        can't talk
-                      </label>
-                    </div>
-
-                    <h6 class="mt-2 font-italic">Food:</h6>
-                    <div class="form-check">
-                      <input class="bird-add-filter rapacity form-check-input" type="checkbox" value="true" id="predatory">
-                      <label class="form-check-label" for="predatory">
-                        predatory
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="bird-add-filter rapacity form-check-input" type="checkbox" value="false" id="non-predatory">
-                      <label class="form-check-label" for="non-predatory">
-                        non-predatory
-                      </label>
-                    </div>
-                  </form> -->
-                  <!-- --------------------------- -->
-
-                </div>
+                <div id="add-filters-placeholder" class="mt-md-2"></div>
 
                 <!-- Remove all filters button -->
                 <div id="remove-filters-btn">
@@ -355,18 +162,11 @@
                   </div>
                 </div>
 
-                <!-- ============================================================ -->
-
               </div>
             </div>
           </div>
 
-          <!-- ============================================================== -->
-
-
         </div>
-
-        <!-- ========================================================== -->
 
         <!-- Results (Pets rendering) -->
         <div id="products" class="d-flex flex-wrap col-12 col-sm-6 col-md-8 col-lg-9 f-wrap"></div>
@@ -374,10 +174,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Cart -->
-
-  <div id="cart-placeholder"></div>
 
   <!-- Footer -->
   <footer id="main-footer" class="text-white text-center bg-dark py-3 footer ">

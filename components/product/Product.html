@@ -1,14 +1,14 @@
 <div class="col-sm-12 col-md-6 col-lg-4">
   <div class="card shadow mb-5">
     <div class="inner">
-      <img src='./data/img/pets/{{id}}.jpg' class="card-img-top" alt="awesome_pet">
+      <img src='{{url}}' class="card-img-top" alt="awesome_pet">
     </div>
     <div class="card-body">
       <h4 class="card-title text-center"><span class="font-italic">{{name}}</span>
-      </h4> <span class="card-text pl-2">Price: ${{price}}</span><br>
+      </h4><span class="card-text pl-2">Price: ${{price}}</span><br>
       <span class="card-text pl-2">Gender: {{gender}}</span><br>
       <span class="card-text pl-2">Quantity: {{quantity}}</span><br>
-      <a href="#" class="btn btn-dark mt-3 w-100 font-italic">Add To Cart</a>
+      <span><button class="btn btn-dark mt-3 w-100 font-italic add-cart-btn" data-id="{{id}}">Add To Cart</button></span>
     </div>
   </div>
 </div>

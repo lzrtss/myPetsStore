@@ -7,12 +7,18 @@ export class ControllerCart {
     this.router = router;
     this.model = new ModelCart(this);
     this.view = new ViewCart(this);
+    this.observer.subscribe('RenderCart', this.loadCart.bind(this));
   }
 
   openCart() {
     console.log('Opened cart'); // REMOVE ME!!!
 
     // const addedProducts = this.model.getAddedProducts;
-    // this.observer.publish('RenderCart', addedProducts); // smth like that
+    this.observer.publish('RenderCart', addedProducts);
+    // this.loadCart(addedProducts); // ????
+  }
+
+  loadCart(addedProducts) {
+    this.view.loadCart();
   }
 }

@@ -9,11 +9,11 @@ import { ControllerCart } from '../components/cart/ControllerCart.js';
 export class Router {
   constructor() {
     this.observer = new Observer();
-    this.controllerProduct = new ControllerProduct(this, this.observer);
-    this.controllerCategory = new ControllerCategory(this, this.observer);
-    this.controllerSearch = new ControllerSearch(this, this.observer);
-    this.controllerFilter = new ControllerFilter(this, this.observer);
-    this.controllerSort = new ControllerSort(this, this.observer);
+    this.controllerProduct = new ControllerProduct(this.observer);
+    this.controllerCategory = new ControllerCategory(this.observer);
+    this.controllerSearch = new ControllerSearch(this.observer);
+    this.controllerFilter = new ControllerFilter(this.observer);
+    this.controllerSort = new ControllerSort(this.observer);
     this.controllerCart = new ControllerCart(this, this.observer);
   }
 }

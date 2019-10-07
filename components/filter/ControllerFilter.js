@@ -2,29 +2,19 @@ import { ViewFilter } from './ViewFilter.js';
 import { ModelFilter } from './ModelFilter.js';
 
 export class ControllerFilter {
-  constructor(router, observer) {
+  constructor(observer) {
     this.observer = observer;
-    this.router = router;
-    this.model = new ModelFilter(this);
-    this.view = new ViewFilter(this);
-    this.observer.subscribe('CategoryChosen', this.chooseAddFilters.bind(this));
-    this.observer.subscribe('ShowAdditionalFilters', this.sendAddFiltersToRender.bind(this));
+    this.model = new ModelFilter();
+    this.view = new ViewFilter();
+    this.handleEvents();
   }
 
-  chooseAddFilters(category) { // ???
-    const output = this.model.chooseAddFilters(category);
-    this.observer.publish('ShowAdditionalFilters', output);
-  }
-
-  sendAddFiltersToRender([output, category]) { // ???
-    this.view.renderAddFilter([output, category]);
-  }
-
-  additionalFilterProducts(checkboxValue) {
-    console.log('Checkbox value:', checkboxValue); // REMOVE ME!
-
-    const additionFilteredProd = this.model.addFilterProducts(checkboxValue);
-    this.observer.publish('RenderProducts', additionFilteredProd);
+  handleEvents() {
+    this.view.handleEvents(
+      this.filterByPrice.bind(this),
+      this.filterByQty.bind(this),
+      this.removeFilters.bind(this)
+    );
   }
 
   filterByPrice() {

@@ -1,22 +1,17 @@
 export class ViewCategory {
-  constructor(contr) {
-    this.controller = contr;
-    document.addEventListener('DOMContentLoaded', this.renderNavbar);
-    this.output = document.querySelector('#products');
-    this.handleEvents();
+  constructor() {
+    // document.addEventListener('DOMContentLoaded', this.renderNavbar); // remove if don't use!
+    // this.output = document.querySelector('#products'); // remove if don't use!
+    this.navbarBtns = document.querySelectorAll('.category-btn');
   }
 
-  renderNavbar() {
-    // document.querySelector('#jjj').innerHTML = this.templater.load(product, this.output);
+  // renderNavbar() { // remove if don't use!
+  // document.querySelector('#jjj').innerHTML = this.templater.load(product, this.output);
+  // }
+
+  handleEvents(filterByCategory) {
+    [...this.navbarBtns].forEach(btn =>
+      btn.addEventListener('click', () => filterByCategory(btn.getAttribute('data-categ-type'))));
   }
 
-  handleEvents() {
-    const navbarBtns = document.querySelectorAll('.category-btn');
-    [...navbarBtns].forEach(btn => btn
-      .addEventListener('click', () => this.controller.filterByCategory(btn.getAttribute('data-categ-type'))));
-  }
-
-  getCategory(e) {
-    return e.target.parentNode.id;
-  }
 }

@@ -2,11 +2,15 @@ import { ViewSearch } from './ViewSearch.js';
 import { ModelSearch } from './ModelSearch.js';
 
 export class ControllerSearch {
-  constructor(router, observer) {
+  constructor(observer) {
     this.observer = observer;
-    this.router = router;
-    this.model = new ModelSearch(this);
-    this.view = new ViewSearch(this);
+    this.model = new ModelSearch();
+    this.view = new ViewSearch();
+    this.handleEvents();
+  }
+
+  handleEvents() {
+    this.view.handleEvents(this.filterProducts.bind(this));
   }
 
   filterProducts() {

@@ -1,12 +1,14 @@
 import Templater from '../../src/Templater.js';
 
 export class ViewProduct {
-  constructor(contr, observer) {
+  constructor(observer) {
     this.observer = observer;
-    this.controller = contr;
     this.templater = new Templater('./components/product/Product.html');
-    document.addEventListener('DOMContentLoaded', this.controller.getProducts.bind(this.controller));
     this.output = document.querySelector('#products');
+  }
+
+  handleEvents(getProducts) {
+    document.addEventListener('DOMContentLoaded', getProducts);
   }
 
   render(products) {
@@ -16,7 +18,7 @@ export class ViewProduct {
       this.templater.load(product, this.output);
 
       // document.querySelector('.add-cart-btn')
-      //   .addEventListener('click', this.controller.addToCart.bind(this.controller));
+      //   .addEventListener('click', this.controller.addToCart.bind(this.controller)); // rewrite using callbacks
 
     });
 
@@ -27,6 +29,6 @@ export class ViewProduct {
   // addEvents() {
   //   const cartBtns = document.querySelectorAll('.add-cart-btn');
   //   [...cartBtns].forEach(btn =>
-  //     btn.addEventListener('click', this.controller.addToCart.bind(this.controller)));
+  //     btn.addEventListener('click', this.controller.addToCart.bind(this.controller))); // rewrite using callbacks
   // }
 }

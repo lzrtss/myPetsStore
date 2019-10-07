@@ -12,6 +12,12 @@ export class ViewCart {
     // this.cartBtn.addEventListener('click', this.controller.openCart.bind(this.controller));
   }
 
+  // ВЫНЕСТИ ВСЕ ОБРАБОТЧИКИ В Ф-ЦИЮ HANDLEEVENTS() И ЗАПУСКАТЬ ЧЕРЕЗ CONTROLLER!!!
+
+  handleEvents() {
+
+  }
+
   loadCart() {
     const cartProducts = JSON.parse(localStorage.getItem('cartProducts'));
     cartProducts.forEach(prod => this.templater.load(prod, this.cartDiv));
@@ -58,7 +64,6 @@ export class ViewCart {
       document.querySelector('#cart-number').innerHTML = totalAmount;
     }
   }
-
 
 }
 

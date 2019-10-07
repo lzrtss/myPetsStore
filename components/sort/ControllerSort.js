@@ -2,14 +2,20 @@ import { ViewSort } from './ViewSort.js';
 import { ModelSort } from './ModelSort.js';
 
 export class ControllerSort {
-  constructor(router, observer) {
+  constructor(observer) {
     this.observer = observer;
-    this.router = router;
-    this.model = new ModelSort(this);
-    this.view = new ViewSort(this);
+    this.model = new ModelSort();
+    this.view = new ViewSort();
+    this.handleEvents();
   }
 
-  sortProducts(sortType) {
+  handleEvents() {
+    this.view.handleEvents(this.sortProducts.bind(this));
+  }
+
+  sortProducts(sortType, e) {
+    e.preventDefault();
+
     const sortedProducts = this.model.sortProducts(sortType);
 
     this.observer.publish('RenderProducts', sortedProducts);

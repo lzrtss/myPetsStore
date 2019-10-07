@@ -1,47 +1,32 @@
 // import Templater from '../../src/Templater.js';
 
 export class ViewFilter {
-  constructor(contr) {
-    this.controller = contr;
+  constructor() {
     // this.templater = new Templater('./components/filter/Filter.html');
-
     this.minPriceInput = document.querySelector('#min-price');
     this.maxPriceInput = document.querySelector('#max-price');
     this.minQtyInput = document.querySelector('#min-qty');
     this.maxQtyInput = document.querySelector('#max-qty');
     this.removeFiltersBtn = document.querySelector('#remove-filters');
-    this.addFilters = document.querySelector('#add-filters-placeholder');
-    this.handleEvents();
   }
 
-  handleEvents() {
+  handleEvents(filterByPrice, filterByQty, removeFilters) {
     this.minPriceInput
-      .addEventListener('input', this.controller.filterByPrice.bind(this.controller));
+      .addEventListener('input', filterByPrice);
     this.maxPriceInput
-      .addEventListener('input', this.controller.filterByPrice.bind(this.controller));
+      .addEventListener('input', filterByPrice);
     this.minQtyInput
-      .addEventListener('input', this.controller.filterByQty.bind(this.controller));
+      .addEventListener('input', filterByQty);
     this.maxQtyInput
-      .addEventListener('input', this.controller.filterByQty.bind(this.controller));
-
+      .addEventListener('input', filterByQty);
     this.removeFiltersBtn
-      .addEventListener('click', this.controller.removeFilters.bind(this.controller));
-    document.addEventListener('DOMContentLoaded', this.renderFilters.bind(this));
+      .addEventListener('click', removeFilters);
+
+    document.addEventListener('DOMContentLoaded', this.renderFilters.bind(this)); // REMOVE IF I DON'T NEED THAT
   }
 
   renderFilters() {
-    // RENDER MAIN FILTERS!
-  }
-
-  renderAddFilter([output, category]) { // is it allowed (array as an argument)???
-    this.addFilters.innerHTML = output;
-
-    console.log('This is a', category); // REMOVE ME!!!
-
-    const addFilterBtns = document.querySelectorAll(`.${category}-add-filter`);
-    addFilterBtns.forEach(btn => console.log(btn.getAttribute('data-additional-filter')));
-
-    [...addFilterBtns].forEach(btn => btn.addEventListener('change', () => this.controller.additionalFilterProducts(btn.getAttribute('data-additional-filter'))));
+    // RENDER MAIN FILTERS USING TEMPLATER!
   }
 
   getMinMaxPrice() {
@@ -60,7 +45,4 @@ export class ViewFilter {
     return minMaxObj;
   }
 
-  sayToRemoveFilters() {
-    this.controller.removeFilters();
-  }
 }

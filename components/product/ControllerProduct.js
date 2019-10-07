@@ -2,12 +2,16 @@ import { ViewProduct } from './ViewProduct.js';
 import { ModelProduct } from './ModelProduct.js';
 
 export class ControllerProduct {
-  constructor(router, observer) {
+  constructor(observer) {
     this.observer = observer;
-    this.router = router;
-    this.model = new ModelProduct(this);
-    this.view = new ViewProduct(this);
+    this.model = new ModelProduct();
+    this.view = new ViewProduct();
     this.observer.subscribe('RenderProducts', this.sendProductsToRender.bind(this));
+    this.handleEvents();
+  }
+
+  handleEvents() {
+    this.view.handleEvents(this.getProducts.bind(this));
   }
 
   getProducts() {
@@ -18,7 +22,7 @@ export class ControllerProduct {
     this.view.render(products);
   }
 
-  // addToCart() { // doen't work
+  // addToCart() { // doesn't work
   //   console.log('Added to cart');
   // }
 }

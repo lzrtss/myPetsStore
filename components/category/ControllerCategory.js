@@ -2,11 +2,15 @@ import { ViewCategory } from './ViewCategory.js';
 import { ModelCategory } from './ModelCategory.js';
 
 export class ControllerCategory {
-  constructor(router, observer) {
+  constructor(observer) {
     this.observer = observer;
-    this.router = router;
-    this.model = new ModelCategory(this);
-    this.view = new ViewCategory(this);
+    this.model = new ModelCategory();
+    this.view = new ViewCategory();
+    this.handleEvents();
+  }
+
+  handleEvents() {
+    this.view.handleEvents(this.filterByCategory.bind(this));
   }
 
   filterByCategory(category) {

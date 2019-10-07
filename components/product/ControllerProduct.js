@@ -18,7 +18,7 @@ export class ControllerProduct {
     this.view.render(products);
   }
 
-  addToCart() {
-    console.log('Added to cart');
-  }
+  // addToCart() { // doen't work
+  //   console.log('Added to cart');
+  // }
 }

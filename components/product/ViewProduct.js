@@ -24,9 +24,9 @@ export class ViewProduct {
     // this.addEvents();
   }
 
-  addEvents() {
-    const cartBtns = document.querySelectorAll('.add-cart-btn');
-    [...cartBtns].forEach(btn =>
-      btn.addEventListener('click', this.controller.addToCart.bind(this.controller)));
-  }
+  // addEvents() {
+  //   const cartBtns = document.querySelectorAll('.add-cart-btn');
+  //   [...cartBtns].forEach(btn =>
+  //     btn.addEventListener('click', this.controller.addToCart.bind(this.controller)));
+  // }
 }

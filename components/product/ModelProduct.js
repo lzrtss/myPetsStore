@@ -13,9 +13,9 @@ export class ModelProduct {
             prod.ordered = 0;
           });
           localStorage.setItem('products', JSON.stringify(products));
-          // reset sort
+          // for sort cancelling
           localStorage.setItem('notSortedProducts', JSON.stringify(products));
-          // empty array of products for cart
+          // array of products added to the cart (empty by default)
           localStorage.setItem('cartProducts', JSON.stringify([]));
         }
         return products;

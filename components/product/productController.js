@@ -1,11 +1,11 @@
-import { ViewProduct } from './ViewProduct.js';
-import { ModelProduct } from './ModelProduct.js';
+import { ProductView } from './productView.js';
+import { ProductModel } from './productModel.js';
 
-export class ControllerProduct {
+export class ProductController {
   constructor(observer) {
     this.observer = observer;
-    this.model = new ModelProduct();
-    this.view = new ViewProduct();
+    this.model = new ProductModel();
+    this.view = new ProductView();
     this.observer.subscribe('RenderProducts', this.sendProductsToRender.bind(this));
     this.handleEvents();
   }

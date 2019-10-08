@@ -1,4 +1,4 @@
-export class ModelProduct {
+export class ProductModel {
   getProducts(sendProductsToRender) {
     fetch('./data/goods.json')
       // return fetch('https://cors-anywhere.herokuapp.com/https://gentle-coast-49966.herokuapp.com/get-goods')

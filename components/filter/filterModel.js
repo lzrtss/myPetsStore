@@ -1,4 +1,4 @@
-export class ModelFilter {
+export class FilterModel {
 
   filterByPrice(min, max) {
     min = parseInt(min) || 0;

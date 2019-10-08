@@ -1,4 +1,4 @@
-export class ViewSort {
+export class SortView {
   constructor() {
     this.removeFiltersBtn = document.querySelector('#remove-filters');
     this.sortBtns = document.querySelectorAll('.sort-btn');
@@ -8,5 +8,4 @@ export class ViewSort {
     [...this.sortBtns].forEach(btn =>
       btn.addEventListener('click', (e) => sortProducts(btn.getAttribute('data-sort-type'), e)));
   }
-
 }

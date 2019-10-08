@@ -1,4 +1,4 @@
-export class ViewSearch {
+export class SearchView {
   constructor(observer) {
     this.observer = observer;
     this.searchInput = document.querySelector('#search-input');

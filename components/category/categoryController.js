@@ -1,11 +1,11 @@
-import { ViewCategory } from './ViewCategory.js';
-import { ModelCategory } from './ModelCategory.js';
+import { CategoryView } from './categoryView.js';
+import { CategoryModel } from './categoryModel.js';
 
-export class ControllerCategory {
+export class CategoryController {
   constructor(observer) {
     this.observer = observer;
-    this.model = new ModelCategory();
-    this.view = new ViewCategory();
+    this.view = new CategoryView();
+    this.model = new CategoryModel();
     this.handleEvents();
   }
 

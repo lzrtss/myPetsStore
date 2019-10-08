@@ -1,5 +1,4 @@
-export class ModelSearch {
-
+export class SearchModel {
   filterProducts(phrase) {
     // Get current products array from LS
     const products = JSON.parse(localStorage.getItem('products'));
@@ -19,5 +18,4 @@ export class ModelSearch {
 
     return products.filter(product => product.statusFilter.length === 0);
   }
-
 }

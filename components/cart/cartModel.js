@@ -1,4 +1,4 @@
-export class ModelCart {
+export class CartModel {
   constructor(contr) {
     this.controller = contr;
   }

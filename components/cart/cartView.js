@@ -1,6 +1,6 @@
-import Templater from '../../src/Templater.js';
+import Templater from '../../src/templater.js';
 
-export class ViewCart {
+export class CartView {
   constructor(contr) {
     this.controller = contr;
     this.cartBtn = document.querySelector('#cart-btn');

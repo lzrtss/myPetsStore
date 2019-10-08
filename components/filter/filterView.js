@@ -1,4 +1,4 @@
-export class ViewFilter {
+export class FilterView {
   constructor() {
     this.minPriceInput = document.querySelector('#min-price');
     this.maxPriceInput = document.querySelector('#max-price');

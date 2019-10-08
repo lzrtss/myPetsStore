@@ -1,9 +1,9 @@
-import Templater from '../../src/Templater.js';
+import Templater from '../../src/templater.js';
 
-export class ViewProduct {
+export class ProductView {
   constructor(observer) {
     this.observer = observer;
-    this.templater = new Templater('./components/product/Product.html');
+    this.templater = new Templater('./components/product/product.html');
     this.output = document.querySelector('#products');
   }
 

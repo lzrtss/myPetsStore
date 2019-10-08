@@ -1,11 +1,11 @@
-import { ViewFilter } from './ViewFilter.js';
-import { ModelFilter } from './ModelFilter.js';
+import { FilterView } from './filterView.js';
+import { FilterModel } from './filterModel.js';
 
-export class ControllerFilter {
+export class FilterController {
   constructor(observer) {
     this.observer = observer;
-    this.model = new ModelFilter();
-    this.view = new ViewFilter();
+    this.model = new FilterModel();
+    this.view = new FilterView();
     this.handleEvents();
   }
 

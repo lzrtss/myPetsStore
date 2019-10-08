@@ -1,4 +1,4 @@
-export class ViewCategory {
+export class CategoryView {
   constructor() {
     this.navbarBtns = document.querySelectorAll('.category-btn');
   }

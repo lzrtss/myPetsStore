@@ -1,12 +1,12 @@
-import { ViewCart } from './ViewCart.js';
-import { ModelCart } from './ModelCart.js';
+import { CartView } from './cartView.js';
+import { CartModel } from './cartModel.js';
 
-export class ControllerCart {
+export class CartController {
   constructor(router, observer) {
     this.observer = observer;
     this.router = router;
-    this.model = new ModelCart(this);
-    this.view = new ViewCart(this);
+    this.model = new CartModel(this);
+    this.view = new CartView(this);
     this.observer.subscribe('RenderCart', this.loadCart.bind(this));
     this.handleEvents();
   }

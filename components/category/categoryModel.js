@@ -1,4 +1,4 @@
-export class ModelCategory {
+export class CategoryModel {
 
   getProdByCategory(category) {
     let products = JSON.parse(localStorage.getItem('products'));

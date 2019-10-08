@@ -1,11 +1,11 @@
-import { ViewSort } from './ViewSort.js';
-import { ModelSort } from './ModelSort.js';
+import { SortView } from './sortView.js';
+import { SortModel } from './sortModel.js';
 
-export class ControllerSort {
+export class SortController {
   constructor(observer) {
     this.observer = observer;
-    this.model = new ModelSort();
-    this.view = new ViewSort();
+    this.model = new SortModel();
+    this.view = new SortView();
     this.handleEvents();
   }
 

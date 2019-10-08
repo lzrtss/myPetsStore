@@ -1,5 +1,4 @@
-export class ModelSort {
-
+export class SortModel {
   sortProducts(sortType) {
     // Get current products array from LS
     const products = JSON.parse(localStorage.getItem('products'));
@@ -19,5 +18,4 @@ export class ModelSort {
 
     return products.filter(product => product.statusFilter.length === 0);
   }
-
 }

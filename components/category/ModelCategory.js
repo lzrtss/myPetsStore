@@ -3,7 +3,7 @@ export class ModelCategory {
   getProdByCategory(category) {
     let products = JSON.parse(localStorage.getItem('products'));
 
-    // remove old status and add new status
+    // Remove old status and add new status
     products.forEach((product) => {
       let index = product.statusFilter.indexOf('category');
       if (index !== -1) {
@@ -14,7 +14,7 @@ export class ModelCategory {
       }
     });
 
-    // rewrite products in LS
+    // Rewrite current products array to LS
     localStorage.setItem('products', JSON.stringify(products));
 
     return products.filter(product => product.statusFilter.length === 0);

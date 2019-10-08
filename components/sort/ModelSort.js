@@ -1,7 +1,7 @@
 export class ModelSort {
 
   sortProducts(sortType) {
-    // get current products array from LS
+    // Get current products array from LS
     const products = JSON.parse(localStorage.getItem('products'));
 
     if (sortType === 'sort-price-up') {
@@ -14,7 +14,7 @@ export class ModelSort {
       products.sort((product1, product2) => product2.quantity - product1.quantity);
     }
 
-    // rewrite products in LS
+    // Rewrite current products array to LS
     localStorage.setItem('products', JSON.stringify(products));
 
     return products.filter(product => product.statusFilter.length === 0);

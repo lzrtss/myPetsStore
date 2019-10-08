@@ -21,8 +21,4 @@ export class ControllerProduct {
   sendProductsToRender(products) {
     this.view.render(products);
   }
-
-  // addToCart() { // doesn't work
-  //   console.log('Added to cart');
-  // }
 }

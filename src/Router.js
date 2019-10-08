@@ -14,6 +14,6 @@ export class Router {
     this.controllerSearch = new ControllerSearch(this.observer);
     this.controllerFilter = new ControllerFilter(this.observer);
     this.controllerSort = new ControllerSort(this.observer);
-    this.controllerCart = new ControllerCart(this, this.observer);
+    this.controllerCart = new ControllerCart(this, this.observer); // remove this
   }
 }

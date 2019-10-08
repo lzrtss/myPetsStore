@@ -62,10 +62,6 @@ export class ModelFilter {
     products.forEach(product => product.statusFilter = []);
     localStorage.setItem('products', JSON.stringify(products));
     return products;
-
-    // SHOULD ALSO CLEAR MAIN FILTERS, CHECKBOXES AND SEARCH BAR!
-    // clearFilterValues();
-    // removeAddFilters(); // REMOVE ADDITIONAL FILTERS
   }
 
 }

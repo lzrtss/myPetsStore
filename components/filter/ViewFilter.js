@@ -1,8 +1,5 @@
-// import Templater from '../../src/Templater.js';
-
 export class ViewFilter {
   constructor() {
-    // this.templater = new Templater('./components/filter/Filter.html');
     this.minPriceInput = document.querySelector('#min-price');
     this.maxPriceInput = document.querySelector('#max-price');
     this.minQtyInput = document.querySelector('#min-qty');
@@ -21,12 +18,6 @@ export class ViewFilter {
       .addEventListener('input', filterByQty);
     this.removeFiltersBtn
       .addEventListener('click', removeFilters);
-
-    document.addEventListener('DOMContentLoaded', this.renderFilters.bind(this)); // REMOVE IF I DON'T NEED THAT
-  }
-
-  renderFilters() {
-    // RENDER MAIN FILTERS USING TEMPLATER!
   }
 
   getMinMaxPrice() {

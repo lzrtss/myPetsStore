@@ -14,21 +14,6 @@ export class ViewProduct {
   render(products) {
     this.output.innerHTML = '';
 
-    products.forEach(product => {
-      this.templater.load(product, this.output);
-
-      // document.querySelector('.add-cart-btn')
-      //   .addEventListener('click', this.controller.addToCart.bind(this.controller)); // rewrite using callbacks
-
-    });
-
-
-    // this.addEvents();
+    products.forEach(product => this.templater.load(product, this.output));
   }
-
-  // addEvents() {
-  //   const cartBtns = document.querySelectorAll('.add-cart-btn');
-  //   [...cartBtns].forEach(btn =>
-  //     btn.addEventListener('click', this.controller.addToCart.bind(this.controller))); // rewrite using callbacks
-  // }
 }

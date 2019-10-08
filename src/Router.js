@@ -1,19 +1,19 @@
-import { Observer } from '../components/observer/Observer.js';
-import { ControllerProduct } from '../components/product/ControllerProduct.js';
-import { ControllerCategory } from '../components/category/ControllerCategory.js';
-import { ControllerSearch } from '../components/search/ControllerSearch.js';
-import { ControllerFilter } from '../components/filter/ControllerFilter.js';
-import { ControllerSort } from '../components/sort/ControllerSort.js';
-import { ControllerCart } from '../components/cart/ControllerCart.js';
+import { Observer } from '../components/observer/observer.js';
+import { ProductController } from '../components/product/productController.js';
+import { CategoryController } from '../components/category/categoryController.js';
+import { SearchController } from '../components/search/searchController.js';
+import { FilterController } from '../components/filter/filterController.js';
+import { SortController } from '../components/sort/sortController.js';
+import { CartController } from '../components/cart/cartController.js';
 
 export class Router {
   constructor() {
     this.observer = new Observer();
-    this.controllerProduct = new ControllerProduct(this.observer);
-    this.controllerCategory = new ControllerCategory(this.observer);
-    this.controllerSearch = new ControllerSearch(this.observer);
-    this.controllerFilter = new ControllerFilter(this.observer);
-    this.controllerSort = new ControllerSort(this.observer);
-    this.controllerCart = new ControllerCart(this, this.observer); // remove this
+    this.productController = new ProductController(this.observer);
+    this.categoryController = new CategoryController(this.observer);
+    this.searchController = new SearchController(this.observer);
+    this.filterController = new FilterController(this.observer);
+    this.sortController = new SortController(this.observer);
+    this.cartController = new CartController(this, this.observer); // remove 'this'
   }
 }

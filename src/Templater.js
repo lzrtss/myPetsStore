@@ -24,6 +24,7 @@ export default class Templater {
       });
     }
   }
+
   render() {
     this.elements.forEach(({ objProduct, domNode }) => {
       this.show(objProduct, domNode);
